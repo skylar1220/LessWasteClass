@@ -1,0 +1,12 @@
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lwc.mapper.ShareMapper">
+  <select id="getShareList" resultType="com.lwc.domain.ShareDTO">
+    select * from share;
+  </select>
+
+  <select id="getShare" resultType="com.lwc.domain.ShareDTO">
+    select * from share where s_number = #{s_number};
+  </select>
+</mapper>
